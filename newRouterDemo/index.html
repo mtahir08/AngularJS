@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>New Router Demo</title>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="node_modules/angular-new-router/dist/router.es5.min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/view/view.js"></script>
+</head>
+<body ng-app="app" ng-controller="AppController as app">
+<button ng-click="app.goToView()">View</button>
+<button ng-click="app.goToHome()">Home</button>
+
+<div ng-viewport></div>
+</body>
+</html>
