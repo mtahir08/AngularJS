@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pray For Me</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+<!--
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+-->
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="viewDua/viewDuaController.js"></script>
+    <script src="newDua/newDuaController.js"></script>
+    <script src="auth/adminLoginController.js"></script>
+    <script src="adminView/adminViewController.js"></script>
+    <script src="userLogin/fbLoginController.js"></script>
+</head>
+<body ng-app="PrayForMe">
+<div  id="wrapper">
+    <div  id="header" >
+<h1>Dua App</h1>
+    </div>
+    <div>
+        <div id="nav">
+            <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+                <nav layout="column" layout-sm="column" layout-align="center center">
+                   <ul>
+                       <li><md-button class="md-primary" ui-sref="newDua"> New Duaa </md-button> </li>
+                       <li><md-button class="md-primary"  ui-sref="viewDua"> View Duaa  </md-button> </li>
+                       <li><md-button class="md-primary"  ui-sref="userLogin">Login </md-button> </li>
+                       <li><md-button class="md-primary" ui-sref="adminLogin"> Admin Login  </md-button> </li>
+                    </ul>
+
+                </nav>
+            </md-whiteframe>
+        </div>
+
+
+        <div id="main" class="pull-right">
+            <div ui-view></div>
+        </div>
+    </div>    </div>
+    <div id="footer" layout="column" layout-align="center center">
+        <div >
+
+                <hr>
+            <p>A Project of Saylani Mass Training Program</p>
+            <p>&copy2015.All Rights Reserved</p>
+			<p>Muhammad Tahir</p>
+
+        </div>
+
+</div>
+</body>
+</html>

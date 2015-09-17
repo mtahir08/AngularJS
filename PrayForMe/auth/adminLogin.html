@@ -1,0 +1,36 @@
+<!--
+<div class="page-wrapper">
+  <form ng-submit="login()">
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+    </div>
+    <div class="input-group">
+      <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+    </div>
+    <input type="submit" class="btn btn-default" value="Log In">
+  </form>
+
+</div>
+-->
+
+<div layout="column">
+    <md-content layout-padding layout="row" layout-sm="column">
+        <form ng-submit="adminlogin()">
+
+            <div ng-show="error">
+                <span>{{ error.message}}</span>
+            </div>
+
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="user.password" >
+            </md-input-container>
+            <md-button type="submit" class="md-raised">Admin Login</md-button>
+        </form>
+    </md-content>
+
+</div>

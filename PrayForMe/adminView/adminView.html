@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul ng-repeat="obj in privateData" >
+    <md-whiteframe class="md-whiteframe-z5" id="fram" layout="column"  >
+        <div  style="padding-bottom: 12px;">
+            <li id="dua">{{obj.dua}}</li>
+            <div id="btn" >
+                ReQuested By: <li id="name">{{obj.name}}</li>
+                {{obj.counter}}
+                <md-button id="counterBtn" ng-click="Counter(obj)" class="md-raised md-cornered groupX middle" >{{obj.clicked ? 'Prayed' : 'Pray'}}</md-button> <!-- ng-disabled="obj.clicked"-->
+            </div>
+        </div>
+    </md-whiteframe>
+
+</ul>
+
+</body>
+</html>
