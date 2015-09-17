@@ -1,0 +1,94 @@
+<div ng-controller="ViewController as view" layout="row">
+    <div flex="10"></div>
+    <md-card flex="80">
+
+        <table style="margin: 10px auto">
+            <tr>
+                <th>G.R.No</th>
+                <th>Student Name</th>
+                <th>Father Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="record in view.studentRecords">
+                <td id="index">{{$index+1}}</td>
+                <td>{{record.studentName}}</td>
+                <td>{{record.fatherName}}</td>
+                <td>{{record.address}}</td>
+                <td>{{record.contact}}</td>
+                <td>{{record.age}}</td>
+                <td>{{record.gender}}</td>
+                <td>
+
+                                        <ng-md-icon icon="edit" size="25" ng-click="view.edit(record.$id)"></ng-md-icon>
+   <!--                 <md-button class="md-primary md-raised" ng-click="view.showAdvanced($event,record,$index,record.$id)">
+                        Custom Dialog
+                    </md-button>
+   -->             </td>
+                <td id="delete">
+                    <ng-md-icon icon="delete" size="25" ng-click="view.studentRecords.$remove(record)"></ng-md-icon>
+                </td>
+
+            </tr>
+        </table>
+
+    </md-card>
+    <div flex>
+        <!--{{a|date:'medium'}}-->
+    </div>
+</div>
+<!--
+
+<script type="text/ng-template" id="up.html">
+    <md-dialog>
+        <md-card flex="70">
+            <md-content layout-padding layout="column">
+                <form name="userForm">
+                    <div layout="column" layout-sm="column" layout-align="center">
+                        <div layout="row" layout-align="center center">
+                            <md-input-container>
+                                <label>Student Name</label>
+                                <input ng-model="add.sname">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Father Name</label>
+                                <input ng-model="add.fname">
+                            </md-input-container>
+                        </div>
+                        <div layout="row" layout-align="center center">
+                            <md-input-container>
+                                <label>age</label>
+                                <input type="number" ng-model="add.age">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Contact #</label>
+                                <input ng-model="add.contact">
+                            </md-input-container>
+                        </div>
+                        <md-input-container>
+                            <label>address</label>
+                            <input ng-model="add.address">
+                        </md-input-container>
+                        <div layout="column" layout-align="center center">
+                            <md-input-container>
+                                <md-radio-group ng-model="add.gender.select" layout="row">
+                                    <md-radio-button class="md-primary" value="male">Male</md-radio-button>
+                                    <md-radio-button class="md-primary" value="female"> Female</md-radio-button>
+                                </md-radio-group>
+                            </md-input-container>
+                            <div layout="row">
+                                <md-button class="md-raised" ng-click="answer('not useful')">Update</md-button>
+                                <md-button class="md-raised" ng-click="answer('useful')">Cencel</md-button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </md-content>
+        </md-card>
+    </md-dialog>
+</script>-->

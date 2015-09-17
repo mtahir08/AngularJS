@@ -1,0 +1,50 @@
+<!--<md-dialog>-->
+<div layout="row">
+    <div flex="15"></div>
+    <md-card flex="70">
+        <md-content layout-padding layout="column">
+            <form name="userForm">
+                <div layout="column" layout-sm="column" layout-align="center">
+                    <div layout="row" layout-align="center center">
+                        <md-input-container>
+                            <label>Student Name</label>
+                            <input ng-model="update.sname">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Father Name</label>
+                            <input ng-model="update.fname">
+                        </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-input-container>
+                            <label>age</label>
+                            <input type="number" ng-model="update.age">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Contact #</label>
+                            <input ng-model="update.contact">
+                        </md-input-container>
+                    </div>
+                    <md-input-container>
+                        <label>address</label>
+                        <input ng-model="update.address">
+                    </md-input-container>
+                    <div layout="column" layout-align="center center">
+                        <md-input-container>
+                            <md-radio-group ng-model="update.gender" layout="row">
+                                <md-radio-button class="md-primary" value="male">Male</md-radio-button>
+                                <md-radio-button class="md-primary" value="female"> Female</md-radio-button>
+                            </md-radio-group>
+                        </md-input-container>
+                        <div layout="row">
+                            <md-button class="md-raised" type="submit" ng-click="update.update()">Update</md-button>
+                            <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </md-content>
+    </md-card>
+<!--</md-dialog>-->
+</div>

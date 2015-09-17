@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>New Router Demo</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,vietnamese' rel='stylesheet'
+          type='text/css'>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-material-icons/angular-material-icons.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <!--<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>-->
+    <!--<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>-->
+    <!--<script src="bower_components/firebase/firebase.js"></script>-->
+    <!--<script src="bower_components/angular-messages/angular-messages.js"></script>-->
+    <script src="node_modules/angular-new-router/dist/router.es5.min.js"></script>
+    <!--
+
+        <script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    -->
+
+
+    <script src="app.js"></script>
+    <script src="components/add/add.js"></script>
+    <script src="components/view/view.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/update/update.js"></script>
+</head>
+<body ng-app="app" ng-controller="AppController as app">
+<div layout="row">
+    <div flex="15"></div>
+
+
+    <md-card flex="70">
+        <div md-border-bottom md-dynamic-height>
+            <section layout="row" layout-sm="column" layout-align="center center">
+                <md-button class="groupX left" ng-click="app.goToAdd()">Add Student</md-button>
+                <md-button class="groupX right" ng-click="app.goToView()">View All Students</md-button>
+            </section>
+        </div>
+        <div ng-viewport></div>
+    </md-card>
+
+    <div flex="15"></div>
+</div>
+</body>
+</html>
